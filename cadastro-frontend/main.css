@@ -1,0 +1,224 @@
+:root {
+    --color-ascent: rgb(165, 94, 234);
+    --color-black: rgb(0, 0, 0);
+    --color-light-gray: rgb(167, 167, 167);
+    --color-light-gray--hover: rgba(167, 167, 167, .7);
+    --color-light-red: rgb(223, 78, 78);
+    --color-off-white: rgb(245, 245, 245);
+    --color-white: rgb(255, 255, 255);
+}
+
+/* DARK THEME 
+.x {
+    --color-ascent: #333;
+    /* ADICIONAR CLASSE X NO HTML */
+
+/* -----GLOBAL----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 62.5%;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+body {
+    background-color: var(--color-off-white);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
+}
+
+/* -------------------- */
+
+header {
+    padding: .5rem;
+    background-color: var(--color-ascent);
+    color: var(--color-white);
+    font-size: 2.6rem;
+    text-align: center;
+    user-select: none;
+}
+
+.action-bar {
+    user-select: none;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.action-bar .input-search-header {
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-family: 'Radio Canada', sans-serif;
+    border-radius: 1rem;
+}
+
+.action-bar .btn-add,
+.action-bar .btn-search {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--color-light-gray);
+    transition: all .3s;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.action-bar .btn-add:hover,
+.action-bar .btn-search:hover {
+    background-color: var(--color-light-gray--hover);
+}
+
+.action-bar .btn-add:hover {
+    transform: translate(.2rem, .2rem);
+}
+
+main {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 4.6rem;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+}
+
+.modal {
+    padding: 3rem;
+    border: 1px solid var(--color-black);
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .5rem .5rem 1.5rem var(--color-light-gray);
+    width: 40rem;
+    position: relative;
+    opacity: .1;
+    transform: scale(.1);
+    animation: appear-modal 1s forwards;
+    width: min(40rem, 80vw);
+}
+
+@keyframes appear-modal {
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal .title {
+    margin-bottom: 2rem;
+}
+
+.modal .btn-close-modal {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    border-radius: 2rem;
+    padding: .8rem;
+    background-color: var(--color-light-gray);
+    user-select: none;
+    transition: all .3s;
+}
+
+.modal .btn-close-modal:hover {
+    background-color: var(--color-light-red);
+    font-weight: 800;
+}
+
+.container-input {
+    margin-bottom: 1.5rem;
+}
+
+.container-input label input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    font-family: 'Radio Canada', sans-serif;
+    width: min(34rem, 100%);
+}
+
+.modal div.action {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-black);
+    width: 100%;
+}
+
+.modal .btn-save {
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-ascent);
+    color: var(--color-white);
+    background-color: var(--color-ascent);
+    font-family: 'Radio Canada', sans-serif;
+    transition: all .3s;
+}
+
+.modal .btn-save:hover {
+    background-color: transparent;
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+@media (max-width: 520px) {
+    .action-bar {
+        flex-direction: column;
+    }
+
+    .btn-add, .btn-search {
+        margin-top: 1rem;
+        align-self: stretch;
+        margin-right: 0;
+    }
+}

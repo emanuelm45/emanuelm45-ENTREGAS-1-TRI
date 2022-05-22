@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script defer async src='main.js'></script>
+</head>
+
+<body>
+    <header>
+        <span class="main-title">SIGAA 2</span>
+    </header>
+
+    <main>
+        <div class="action-bar">
+            <input class="input-search-header" type="search">
+            <button class="btn-search">Pesquisar</button>
+            <button class="btn-add">Adicionar</button>
+        </div>
+
+        <div class="container-data">
+            <template class="student">
+                <div class="modal">
+                    <span class=" btn-close-modal material-symbols-outlined">
+                        close
+                    </span>
+                    <h1 class="title">Cadastro</h1>
+                    <form action="POST">
+                        <div class="container-input">
+                            <label for="name">Nome:
+                                <input type="text" id="name" name="name" placeholder="Fulano da Silva" autofocus>
+                            </label>
+                        </div>
+                        <div class="container-input">
+                            <label for="birthDate">Data de nascimento:
+                                <input type="text" id="birthDate" name="birthDate" placeholder="30-04-2004">
+                            </label>
+                        </div>
+                        <div class="container-input">
+                            <label for="enrollment">Matrícula:
+                                <input data-enrollment-mask="enrollment" type="text" id="enrollment" name="enrollment"
+                                    placeholder="2020313795">
+                            </label>
+                        </div>
+                    </form>
+
+                    <div class="action">
+                        <button class="btn-save">SALVAR</button>
+                    </div>
+                </div>
+            </template>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
